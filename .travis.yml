@@ -30,5 +30,10 @@ install:
   # using yarn install --frozen-lockfile as an npm ci equivalent.
   - yarn install --frozen-lockfile
 
+before_script:
+  # serve app in background
+  - yarn run start -- --port 8888 &
+
 script:
-  - yarn run cypress:ci
+  # use Chrome instead of built in Electron browser
+  - yarn run cypress:run --  --record --parallel --browser chrome

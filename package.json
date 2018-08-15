@@ -4,17 +4,15 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "start:ci": "ng serve --port 8888",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "start:ci": "ng serve --port 8888",
     "cypress": "start-server-and-test start http://localhost:4200 cy:watch",
     "cypress:run": "start-server-and-test start http://localhost:8888 cy:run",
-    "cypress:ci": "start-server-and-test start:ci http://localhost:8888 cy:runci",
     "cy:watch": "$(npm bin)/cypress open",
-    "cy:run": "$(npm bin)/cypress run",
-    "cy:runci": "$(npm bin)/cypress run --record --parallel"
+    "cy:run": "$(npm bin)/cypress run"
   },
   "private": true,
   "dependencies": {
