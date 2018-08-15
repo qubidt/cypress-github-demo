@@ -6,10 +6,10 @@ language: node_js
 
 # https://docs.travis-ci.com/user/speeding-up-the-build/#parallelizing-your-builds-across-virtual-machines
 env:
-  - PARALLEL_NUM=0
   - PARALLEL_NUM=1
   - PARALLEL_NUM=2
   - PARALLEL_NUM=3
+  - PARALLEL_NUM=4
 
 node_js:
   - 10
