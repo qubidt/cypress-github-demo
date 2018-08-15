@@ -38,4 +38,4 @@ script:
   # record tests and upload them to cypress dashboard
   # parallel to spread across VMs initialized by travis for `env` matrix
   # port defined in angular.json (projects:cypress-github-demo:architect:serve:configurations:ci:port)
-  - $(npm bin)/cypress run --record --parallel --baseUrl="http://localhost:8888"
+  - $(npm bin)/cypress run --record --parallel --config baseUrl="http://localhost:8888"
