@@ -32,10 +32,10 @@ install:
 
 before_script:
   # serve app in background
-  - yarn run start --port 8888 &
+  - ng serve --configuration=ci &
 
 script:
   # record tests and upload them to cypress dashboard
   # parallel to spread across VMs initialized by travis for `env` matrix
-  # use Chrome instead of built in Electron browser for compatibility testing
-  - yarn run cy:run --record --parallel --browser chrome
+  # port defined in angular.json (projects:cypress-github-demo:architect:serve:configurations:ci:port)
+  - $(npm bin)/cypress run --record --parallel --baseUrl="http://localhost:8888"
