@@ -39,4 +39,4 @@ before_script:
 script:
   # record tests and upload them to cypress dashboard
   # parallel to spread across VMs initialized by travis for `env` matrix
-  - cypress run --record --parallel --config baseUrl="localhost:8888"
+  - cypress run --record --parallel --config baseUrl="http://localhost:8888"
