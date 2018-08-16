@@ -34,7 +34,7 @@ before_script:
   # serve app in background
   - ng serve --port=8888 --progress=false &
   # wait for webserver to respond before
-  - until curl --output /dev/null --silent --head --fail http://localhost:8888; do true; done > /dev/null
+  - until curl -vs -o /dev/null http://localhost:8888 2>&1; do true; done > /dev/null
 
 script:
   # record tests and upload them to cypress dashboard
