@@ -9,7 +9,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "cypress": "start-server-and-test start http://localhost:4200 cy:watch",
-    "cy:watch": "$(npm bin)/cypress open",
+    "cy:watch": "$(npm bin)/cypress open --config baseUrl=\"http://localhost:4200\"",
     "cy:test": "start-server-and-test start http://localhost:4200 cy:run",
     "cy:run": "$(npm bin)/cypress run"
   },
