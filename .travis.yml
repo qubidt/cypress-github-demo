@@ -9,7 +9,6 @@ env:
   - PARALLEL_NUM=1
   - PARALLEL_NUM=2
   - PARALLEL_NUM=3
-  - PARALLEL_NUM=4
 
 node_js:
   - 10
